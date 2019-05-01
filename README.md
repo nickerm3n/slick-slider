@@ -1,0 +1,2 @@
+# slick-slider
+easy slider
