@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600');
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+}
+
+html {
+	height: 100%;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+body {
+	font: 400 86px/normal 'Poppins', sans-serif;
+
+}
+
+.slick-prev,
+.slick-next {
+	font-size: 0;
+	background: none;
+	z-index: 999;
+	cursor: pointer;
+	position: absolute;
+	top: 48%;
+	color: #fff;
+	opacity: .7;
+	transition: all .3s;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&::before {
+		font-size: 40px;
+	}
+}
+
+.slick-prev {
+	left: -60px;
+	background: url('../images/slick-prev.png');
+	background-size: cover;
+
+}
+
+.slick-next {
+	right: -60px;
+	background: url('../images/slick-next.png');
+	background-size: cover;
+
+}
+.slick-next, .slick-prev {
+	
+	&::before {
+		content: '';
+		display: block;
+		width: 50px;
+		height: 50px;
+		background-size: cover;
+	}
+}
+
+.slick-slide {
+    width: 350px;
+}

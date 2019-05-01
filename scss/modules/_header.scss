@@ -1,0 +1,101 @@
+.slider-wrapper {
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 60px;
+	position: relative;
+	z-index: 99;
+}
+
+.plus, .triang {
+	position: absolute;
+	animation: rotate  30s infinite ease-in-out;
+	z-index: 99;
+}
+
+.plus {
+	width: 30px;
+	height: 30px;
+	background: url('../images/plus.png');
+	top: 0;
+}
+
+.triang {
+	width: 48px;
+	height: 48px;
+	background: url('../images/triang.png');
+	right: 0;
+}
+
+@keyframes rotate {
+from {transform: rotate(0deg);}
+to {transform: rotate(360deg);}
+}
+
+.slick-slide:not(.slick-active) {
+	opacity: .3;
+}
+
+.slider-desc {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.slider-title {
+	font-weight: 600;
+	line-height: 85px;
+	position: relative;
+}
+
+.slider {
+	margin: 0 auto;
+	max-width: 77vw;;
+	margin-top: 70px;
+	position: relative;
+	
+}
+
+.slider-item:not(:last-child) {
+	margin: 0 15px;
+}
+
+.slider-item {
+	position: relative;
+	overflow: hidden;
+	
+	&:hover .slider-announce{
+		top: 0;
+		
+	}
+
+	&:hover {
+		opacity: 1;
+	}
+
+}
+
+.slider-announce {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	background:rgba(50, 234, 173, .8);	
+	top: -100%;
+	right: 0;
+	left:0;
+	bottom: 0;
+	font-size: 28px;
+	padding: 20px;
+	letter-spacing: 3px;
+    line-height: 26px;
+    transition: all .1s ease-in-out;
+	
+	&__author {
+		font-size: 12px;
+	}
+	
+}
